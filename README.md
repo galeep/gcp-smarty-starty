@@ -49,8 +49,6 @@ this perspective in mind as you consider this list of potential enhancements.
 9. Logging
 10. Rudimentary state management for projects and experiments (we're currently stateless, but if we bother with state, it should be shared.)
 
-Addressing these enhancements will make the script more versatile, allowing users further to streamline their GCP project setup and management processes.
-
 ## Usage Examples and Scenarios
 
 ### Example 1: Basic Interactive Execution
