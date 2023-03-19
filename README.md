@@ -13,7 +13,14 @@ This script simplifies setting up a new Google Cloud Platform (GCP) project by a
 
 ## Prerequisites
 
-- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) installed and configured with an active account
+### Nice to have
+- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) installed and configured with an active account. The script will attempt to download it if it cannot find `gcloud`, but that functionality is not well tested. 
+- Basic familiarity with GCP terms and concepts
+
+### Required
+- GCP [Cloud Billing Account](https://cloud.google.com/billing/docs/how-to/manage-billing-account#create_a_new_billing_account) ID: A valid Cloud Billing account and billing account ID. 
+- [Billing privileges](https://cloud.google.com/billing/docs/how-to/billing-access#overview_of_billing_roles_in): The ability to link Cloud Billing IDs with GCP projects.
+- GCP: If you do not have a Google Cloud Platform account, you won't be able to do much with this tool. 
 
 ## Usage
 
@@ -25,14 +32,22 @@ Run the script with the desired options and follow the prompts to create a new G
 
 ## Suggested Future Enhancements
 
+This tool has one job, and that's to create a project that is ready to be 
+used for something else. A rule of thumb: if it needs to be done before 
+`terraform apply` can be run, and it's normally driven by gcloud or 
+things that puppet-string gcloud, then this script should be able to do it. Any configuration beyond that is a job for, well, `terraform`. :-) Please keep 
+this perspective in mind as you consider this list of potential enhancements. 
+
 1. Improve error handling and validation for user inputs and script execution.
 2. Support modifying existing projects to apply new settings or configurations.
-3. Add support for additional GCP services and configurations, such as enabling APIs, setting up service accounts, and configuring IAM roles.
-4. Integrate with GCP's Terraform export and import, allowing for a seamless transition between proof of concept development and production.
+3. Add light support for additional GCP services and configurations, such as enabling APIs, setting up service accounts, and configuring IAM roles.
+4. Integrate with GCP's Terraform export and import to aid the transition from proof of concept development to multidev/production.
 5. Add support for organizing projects under folders and applying organization-wide policies.
 6. Allow users to specify a list of enabled APIs and services during project creation.
-7. Add support for creating and configuring projects with private catalogs and shared VPCs.
-8. Allow users to configure custom project templates with predefined settings and configurations.
+7. Allow users to configure custom project templates with predefined settings and configurations.
+8. Integration with the next step in the pipeline (Terraform, Ansible, kubectl, or whatever you needed this tool to get started with!) 
+9. Logging
+10. Rudimentary state management for projects and experiments (we're currently stateless, but if we bother with state, it should be shared.)
 
 Addressing these enhancements will make the script more versatile, allowing users further to streamline their GCP project setup and management processes.
 
