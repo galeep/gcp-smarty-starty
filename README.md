@@ -1,11 +1,15 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/galeep/gcp-smarty-starty/main/media/GCPSmartyStarty.png?size=250" alt="GCP Smarty Starty Logo" width="250" height="250">
-</p>
-
-<h1 align="center">GCP Smarty Starty</h1>
-<p align="center">
-  <i>Effortless GCP project setup for all skill levels.</i>
-</p>
+<table align="center" style="border: none !important;">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/galeep/gcp-smarty-starty/main/media/GCPSmartyStarty.png?size=250" alt="GCP Smarty Starty Logo" width="250" height="250" style="display: block; margin: auto;">
+    </td>
+    <td align="center">
+      <h1>GCP Smarty Starty</h1>
+      <p><i>Effortless GCP project setup for all skill levels.</i></p>
+      <p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a></p>
+    </td>
+  </tr>
+</table> 
 
 ## Table of Contents
 
@@ -142,6 +146,7 @@ this perspective in mind as you consider this list of potential enhancements.
 8. Integration with the next step in the pipeline (Terraform, Ansible, kubectl, or whatever you needed this tool to get started with!) 
 9. Logging
 10. Rudimentary state management for projects and experiments (we're currently stateless, but if we bother with state, it should be shared.)
+11. Break the functions out into a separate file for consumption by other automation. 
 
 ## Rude FAQ
 ### Rude FAQ - Table of Contents
@@ -201,7 +206,7 @@ Besides, we're confident enough in the script's capabilities that we're willing 
 
 ### The name is too long/weird/hyphenated/hard to type/etc.
 
-We know, we know – brevity is the soul of wit, eh? But at least the name is descriptive, unique, and absurdly amusing! Plus, it's a small price to pay for the convenience and time-saving benefits gcp-smarty-starty offers. And if you're really not a fan of the name, you can always give it a nickname or rename it to something shorter that suits your fancy. 
+We know, we know – brevity is the soul of wit, eh? But at least the name is descriptive, unique, and absurdly amusing! Plus, it's a small price to pay for the convenience and time-saving benefits gcp-smarty-starty offers. And if you're really not a fan of the name, you can always give it an alias or rename it to something shorter that suits your fancy. 
 
 ## Contributing
 
