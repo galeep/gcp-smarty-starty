@@ -1,4 +1,28 @@
-﻿# GCP Smarty Starty
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gale/gcp-smarty-starty/main/media/GCPSmartyStarty.png" alt="GCP Smarty Starty Logo" width="250" height="250">
+</p>
+
+<h1 align="center">GCP Smarty Starty</h1>
+<p align="center">
+  <i>Effortless GCP project setup for all skill levels.</i>
+</p>
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+  - [Nice to have](#nice-to-have)
+  - [Required](#required)
+- [Usage](#usage)
+- [Usage Examples and Scenarios](#usage-examples-and-scenarios)
+- [Future Enhancements](#future-enhancements)
+- [Rude FAQ](#rude-faq)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+## Introduction
 
 This script simplifies setting up a new Google Cloud Platform (GCP) project by automating the creation, configuration, and billing account linking process. Its purpose is to save time and effort for users who frequently create and manage GCP projects, particularly those with multiple side projects or experiments. The script encourages using GCP projects as safe, logical, and tidy boundaries, making tracking, analyzing, and managing resources easier.
 
@@ -30,26 +54,15 @@ Run the script with the desired options and follow the prompts to create a new G
 ./gcp-smarty-starty.sh --help
 ```
 
-## Suggested Future Enhancements
-
-This tool has one job, and that's to create a project that is ready to be 
-used for something else. A rule of thumb: if it needs to be done before 
-`terraform apply` can be run, and it's normally driven by gcloud or 
-things that puppet-string gcloud, then this script should be able to do it. Any configuration beyond that is a job for, well, `terraform`. :-) Please keep 
-this perspective in mind as you consider this list of potential enhancements. 
-
-1. Improve error handling and validation for user inputs and script execution.
-2. Support modifying existing projects to apply new settings or configurations.
-3. Add light support for additional GCP services and configurations, such as enabling APIs, setting up service accounts, and configuring IAM roles.
-4. Integrate with GCP's Terraform export and import to aid the transition from proof of concept development to multidev/production.
-5. Add support for organizing projects under folders and applying organization-wide policies.
-6. Allow users to specify a list of enabled APIs and services during project creation.
-7. Allow users to configure custom project templates with predefined settings and configurations.
-8. Integration with the next step in the pipeline (Terraform, Ansible, kubectl, or whatever you needed this tool to get started with!) 
-9. Logging
-10. Rudimentary state management for projects and experiments (we're currently stateless, but if we bother with state, it should be shared.)
-
 ## Usage Examples and Scenarios
+
+### Usage Examples and Scenarios - Table of Contents
+- [Example 1: Basic Interactive Execution](#example-1-basic-interactive-execution)
+- [Example 2: Non-Interactive Execution with Custom Prefix](#example-2-non-interactive-execution-with-custom-prefix)
+- [Example 3: Dry Run with Custom Prefix and Billing Account](#example-3-dry-run-with-custom-prefix-and-billing-account)
+- [Example 4: Custom Dictionary File for Project ID Generation](#example-4-custom-dictionary-file-for-project-id-generation)
+- [Example 5: Quick Mode with Fallback Dictionary](#example-5-quick-mode-with-fallback-dictionary)
+- [Example 6: User-Word Prefix Format](#example-6-user-word-prefix-format)
 
 ### Example 1: Basic Interactive Execution
 
@@ -111,29 +124,36 @@ To generate a project ID with a prefix format that combines the current user's u
 
 The script will generate a project ID with the format "user-word-randomhex", where "user" is the current user's username, "word" is a random word, and "randomhex" is a random hexadecimal string.
 
-## Contributing
+## Future Enhancements
 
-We welcome contributions to this project! If you'd like to contribute, please follow these steps:
+This tool has one job, and that's to create a project that is ready to be 
+used for something else. A rule of thumb: if it needs to be done before 
+`terraform apply` can be run, and it's normally driven by gcloud or 
+things that puppet-string gcloud, then this script should be able to do it. Any configuration beyond that is a job for, well, `terraform`. :-) Please keep 
+this perspective in mind as you consider this list of potential enhancements. 
 
-1. Fork the repository.
-2. Create a new branch with a descriptive name, such as `feature/new-feature` or `fix/issue-123`.
-3. Make your changes in the new branch.
-4. Submit a pull request (PR) to merge your branch into the main branch of the original repository.
-5. Include a detailed description of your changes in the PR, and mention any issues or bugs that your changes are intended to address.
-
-Before submitting a PR, please ensure that your code adheres to the project's coding style and conventions. Additionally, make sure to test your changes thoroughly to avoid introducing new bugs.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). By contributing to this project or using the code, you agree to the terms and conditions of the MIT License. A copy of the license is available in the `LICENSE` file in the repository.
-
-## Support
-
-If you encounter any issues or have questions about this project, please open an issue on the [GitHub repository](https://github.com/galeep/gcp-smarty-starty/issues). We will do our best to help you and address any problems you may be experiencing.
-
-When opening an issue, please provide as much information as possible about the problem, including the steps to reproduce the issue, the environment you're using, and any error messages you're encountering. This will help us diagnose and resolve the issue more quickly.
+1. Improve error handling and validation for user inputs and script execution.
+2. Support modifying existing projects to apply new settings or configurations.
+3. Add light support for additional GCP services and configurations, such as enabling APIs, setting up service accounts, and configuring IAM roles.
+4. Integrate with GCP's Terraform export and import to aid the transition from proof of concept development to multidev/production.
+5. Add support for organizing projects under folders and applying organization-wide policies.
+6. Allow users to specify a list of enabled APIs and services during project creation.
+7. Allow users to configure custom project templates with predefined settings and configurations.
+8. Integration with the next step in the pipeline (Terraform, Ansible, kubectl, or whatever you needed this tool to get started with!) 
+9. Logging
+10. Rudimentary state management for projects and experiments (we're currently stateless, but if we bother with state, it should be shared.)
 
 ## Rude FAQ
+### Rude FAQ - Table of Contents
+
+- [Why should I use gcp-smarty-starty instead of just running a few commands?](#why-should-i-use-gcp-smarty-starty-instead-of-just-running-a-few-commands)
+- [Why doesn't GCP just include, like, a `gcloud quickstart init`?](#why-doesnt-gcp-just-include-like-a-gcloud-quickstart-init)
+- [Why not just use Google Cloud Project Factory?](#why-not-just-use-google-cloud-project-factory)
+- [What if I want more control over project creation and configuration?](#what-if-i-want-more-control-over-project-creation-and-configuration)
+- [Why did you choose to create the project ID using random words and a numeric string, just like the default GCP project naming scheme you're railing against? Isn't tracking projects with a unique ID enough?](#why-did-you-choose-to-create-the-project-id-using-random-words-and-a-numeric-string-just-like-the-default-gcp-project-naming-scheme-youre-railing-against-isnt-tracking-projects-with-a-unique-id-enough)
+- [What's with the ridiculous name, gcp-smarty-starty?](#whats-with-the-ridiculous-name-gcp-smarty-starty)
+- [No, really. Why gcp-smarty-starty?](#no-really-why-gcp-smarty-starty)
+- [The name is too long/weird/hyphenated/hard to type/etc.](#the-name-is-too-longweirdhyphenatedhard-to-typeetc)
 
 ### Why should I use gcp-smarty-starty instead of just running a few commands?
 
@@ -182,3 +202,27 @@ Besides, we're confident enough in the script's capabilities that we're willing 
 ### The name is too long/weird/hyphenated/hard to type/etc.
 
 We know, we know – brevity is the soul of wit, eh? But at least the name is descriptive, unique, and absurdly amusing! Plus, it's a small price to pay for the convenience and time-saving benefits gcp-smarty-starty offers. And if you're really not a fan of the name, you can always give it a nickname or rename it to something shorter that suits your fancy. 
+
+## Contributing
+
+We welcome contributions to this project! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch with a descriptive name, such as `feature/new-feature` or `fix/issue-123`.
+3. Make your changes in the new branch.
+4. Submit a pull request (PR) to merge your branch into the main branch of the original repository.
+5. Include a detailed description of your changes in the PR, and mention any issues or bugs that your changes are intended to address.
+
+Before submitting a PR, please ensure that your code adheres to the project's coding style and conventions. Additionally, make sure to test your changes thoroughly to avoid introducing new bugs.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). By contributing to this project or using the code, you agree to the terms and conditions of the MIT License. A copy of the license is [available](/LICENSE) in the `LICENSE` file [in this repository](/LICENSE).
+
+Copyright (c) 2023 Gale Fagan.
+
+## Support
+
+If you encounter any issues or have questions about this project, please open an issue on the [GitHub repository](https://github.com/galeep/gcp-smarty-starty/issues). We will do our best to help you and address any problems you may be experiencing.
+
+When opening an issue, please provide as much information as possible about the problem, including the steps to reproduce the issue, the environment you're using, and any error messages you're encountering. This will help us diagnose and resolve the issue more quickly.
