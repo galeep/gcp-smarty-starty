@@ -4,7 +4,7 @@
 
 <h1 align="center">GCP Smarty Starty</h1>
 <p align="center">
-  <i><Effortless GCP project setup for all skill levels.</i>
+  <i>Effortless GCP project setup for all skill levels.</i>
 </p>
 
 ## Table of Contents
@@ -171,7 +171,10 @@ When opening an issue, please provide as much information as possible about the 
 - [Why doesn't GCP just include, like, a `gcloud quickstart init`?](#why-doesnt-gcp-just-include-like-a-gcloud-quickstart-init)
 - [Why not just use Google Cloud Project Factory?](#why-not-just-use-google-cloud-project-factory)
 - [What if I want more control over project creation and configuration?](#what-if-i-want-more-control-over-project-creation-and-configuration)
-- [Why did you choose to create the project ID using random words and a numeric string, just like the default GCP project naming scheme you're railing against? Isn't tracking projects with a unique ID enough?](#why-did-you-choose-to-create-the-project-id-using-random-words-and
+- [Why did you choose to create the project ID using random words and a numeric string, just like the default GCP project naming scheme you're railing against? Isn't tracking projects with a unique ID enough?](#why-did-you-choose-to-create-the-project-id-using-random-words-and-a-numeric-string-just-like-the-default-gcp-project-naming-scheme-youre-railing-against-isnt-tracking-projects-with-a-unique-id-enough)
+- [What's with the ridiculous name, gcp-smarty-starty?](#whats-with-the-ridiculous-name-gcp-smarty-starty)
+- [No, really. Why gcp-smarty-starty?](#no-really-why-gcp-smarty-starty)
+- [The name is too long/weird/hyphenated/hard to type/etc.](#the-name-is-too-longweirdhyphenatedhard-to-typeetc)
 
 ### Why should I use gcp-smarty-starty instead of just running a few commands?
 
