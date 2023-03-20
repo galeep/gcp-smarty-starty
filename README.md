@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gale/gcp-smarty-starty/main/media/GCPSmartyStarty.png" alt="GCP Smarty Starty Logo" width="250" height="250">
+  <img src="https://raw.githubusercontent.com/galeep/gcp-smarty-starty/main/media/GCPSmartyStarty.png?size=250" alt="GCP Smarty Starty Logo" width="250" height="250">
 </p>
 
 <h1 align="center">GCP Smarty Starty</h1>
@@ -218,8 +218,6 @@ Before submitting a PR, please ensure that your code adheres to the project's co
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). By contributing to this project or using the code, you agree to the terms and conditions of the MIT License. A copy of the license is [available](/LICENSE) in the `LICENSE` file [in this repository](/LICENSE).
-
-Copyright (c) 2023 Gale Fagan.
 
 ## Support
 
